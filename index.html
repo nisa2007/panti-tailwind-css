@@ -290,39 +290,79 @@
              <!-- Blog Section End -->
               
               <!-- Contact Section Start -->
-            <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
-                <div class="container">
-                    <div class="w-full px-4">
-                        <div class=" mx-auto text-center mb-16">
-                    <h4 class="font-semibold text-lg text-primary mb-2 sm:text-xl lg:text-2xl">Contact</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Hubungi Kami</h2>
-                    <p class="font-medium text-medium text-gray md:text-lg">Kami siap mendengar, berbagi, dan membantu. Jangan ragu untuk menghubungi kami untuk informasi, donasi, maupun kunjungan ke panti</p>
+               <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
+    <div class="container">
+        <div class="w-full px-4">
+            <div class="mx-auto text-center mb-16">
+                <h4 class="font-semibold text-lg text-primary mb-2 sm:text-xl lg:text-2xl">Contact</h4>
+                <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Hubungi Kami</h2>
+                <p class="font-medium text-medium text-gray md:text-lg">
+                    Kami siap mendengar, berbagi, dan membantu. Jangan ragu untuk menghubungi kami untuk informasi, donasi, maupun kunjungan ke panti
+                </p>
+            </div>
+        </div>
+
+        <form id="contactForm">
+            <div class="w-full lg:w-2/3 lg:mx-auto">
+
+                <div class="w-full px-4 mb-8">
+                    <label for="name" class="text-base font-bold text-primary">Nama</label>
+                    <input type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" />
                 </div>
-                    </div>
-                     <form>
-                        <div class="w-full lg:w-2/3 lg:mx-auto">
-                    <div class="w-full px-4 mb-8">
-                       <label for="name" class="text-base font-bold text-primary ">Nama</label>
-                       <input type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" />
-                        
-                    </div>
-                    <div class="w-full px-4 mb-8">
-                       <label for="email" class="text-base font-bold text-primary ">Email</label>
-                       <input type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" />
-                        
-                    </div>
-                    <div class="w-full px-4 mb-8">
-                       <label for="message" class="text-base font-bold text-primary ">Pesan</label>
-                       <textarea type="text" id="message" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"></textarea>   
-                    </div>
-                    <div class="w-full px-4">
-                        <button class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Kirim</button>
-                    </div>
-                    </div>
-                    </form>
+
+                <div class="w-full px-4 mb-8">
+                    <label for="email" class="text-base font-bold text-primary">Email</label>
+                    <input type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" />
                 </div>
-              </section>
+
+                <div class="w-full px-4 mb-8">
+                    <label for="message" class="text-base font-bold text-primary">Pesan</label>
+                    <textarea id="message" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"></textarea>
+                </div>
+
+                <div class="w-full px-4">
+                    <button type="submit" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">
+                        Kirim
+                    </button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</section>
                 <!-- Contact Section Finish -->
+                 <!-- Success Popup -->
+<div id="successPopup"
+class="fixed inset-0 bg-black/50 flex items-center justify-center opacity-0 invisible transition-all duration-300 z-[99999]">
+
+    <div id="popupContent"
+    class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-2xl max-w-md mx-4 text-center scale-75 transition-all duration-300">
+
+        <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center">
+            <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M5 13l4 4L19 7"/>
+            </svg>
+        </div>
+
+        <h3 class="text-2xl font-bold text-dark dark:text-white mb-3">
+            Pesan Berhasil Dikirim 
+        </h3>
+
+        <p class="text-gray-500 mb-6">
+            Pesan yang Anda kirim sudah diterima. Pesan selanjutnya akan dibalas oleh pihak panti melalui email yang Anda masukkan.
+        </p>
+
+  <button
+type="button"
+onclick="closePopup()"
+class="bg-primary text-black dark:text-white px-6 py-3 rounded-full hover:opacity-80">
+    Tutup
+</button>
+    </div>
+</div>
                  <!-- footer start -->
                   <footer class="bg-dark pt-24 pb-12">
                     <div class="container">
